@@ -10,7 +10,8 @@ function sshd_server {
 
   case "${1:-}" in
     default)
-      exec /usr/sbin/sshd -f ~/work/sshd/etc/sshd_config -De
+      (set +f; chmod 600 $shome/etc/*key)
+      exec /usr/sbin/sshd -f "$shome/etc/sshd_config" -De
       ;;
     *)
       echo "ERROR: unknown server command: ${1:-/not-supplied/}" 1>&2
