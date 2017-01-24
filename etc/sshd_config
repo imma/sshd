@@ -42,4 +42,4 @@ UsePAM yes
 
 PidFile /home/ubuntu/work/sshd/etc/sshd.pid
 
-Subsystem sftp /usr/libexec/sftp-server
+Subsystem sftp /usr/lib/sftp-server
