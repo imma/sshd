@@ -6,10 +6,6 @@ HostKey /home/ubuntu/work/sshd/etc/ssh_host_ecdsa_key
 HostKey /home/ubuntu/work/sshd/etc/ssh_host_ed25519_key
 UsePrivilegeSeparation no
 
-# Lifetime and size of ephemeral version 1 server key
-KeyRegenerationInterval 3600
-ServerKeyBits 1024
-
 # Logging
 SyslogFacility AUTH
 LogLevel INFO
@@ -19,11 +15,9 @@ LoginGraceTime 120
 PermitRootLogin no
 StrictModes yes
 
-RSAAuthentication yes
 PubkeyAuthentication yes
 
 IgnoreRhosts yes
-RhostsRSAAuthentication no
 HostbasedAuthentication no
 
 PermitEmptyPasswords no
@@ -37,8 +31,6 @@ PrintLastLog no
 TCPKeepAlive yes
 
 AcceptEnv LANG LC_*
-
-UsePAM yes
 
 PidFile /home/ubuntu/work/sshd/etc/sshd.pid
 
