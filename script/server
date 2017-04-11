@@ -11,7 +11,7 @@ function sshd_server {
   case "${1:-}" in
     default)
       (set +f; chmod 600 $shome/etc/*key)
-      exec $(which "$PKG_HOME/install/sbin/sshd" /usr/sbin/sshd) -f "$shome/etc/sshd_config" -De
+      exec $(which "$PKG_HOME/install/sbin/sshd" /usr/sbin/sshd | head -1) -f "$shome/etc/sshd_config" -De
       ;;
     *)
       echo "ERROR: unknown server command: ${1:-/not-supplied/}" 1>&2
