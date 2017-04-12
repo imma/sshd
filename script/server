@@ -10,6 +10,9 @@ function sshd_server {
 
   case "${1:-}" in
     default)
+      if touch "$PKG_HOME/install/var/chroot/sshd/.non-root"; then
+        sudo install -d "$PKG_HOME/install/var/chroot/sshd" -o root -m 0755
+      fi
       exec $(which "$PKG_HOME/install/sbin/sshd" /usr/sbin/sshd | head -1) -f "/config/ssh/sshd_config" -De
       ;;
     *)
