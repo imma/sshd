@@ -8,6 +8,10 @@ function main {
     return 1
   fi
 
+  if touch "$PKG_HOME/install/var/chroot/sshd/.non-root"; then
+    sudo install -d "$PKG_HOME/install/var/chroot/sshd" -o root -m 0755
+  fi
+
   return 0
 }
 
