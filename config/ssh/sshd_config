@@ -1,10 +1,10 @@
 Port 2222
 Protocol 2
 
-HostKey ~/work/consul/config/ssh/ssh_host_rsa_key
-HostKey ~/work/consul/config/ssh/ssh_host_dsa_key
-HostKey ~/work/consul/config/ssh/ssh_host_ecdsa_key
-HostKey ~/work/consul/config/ssh/ssh_host_ed25519_key
+HostKey ~/work/sshd/config/ssh/ssh_host_rsa_key
+HostKey ~/work/sshd/config/ssh/ssh_host_dsa_key
+HostKey ~/work/sshd/config/ssh/ssh_host_ecdsa_key
+HostKey ~/work/sshd/config/ssh/ssh_host_ed25519_key
 
 # Logging
 SyslogFacility AUTH
