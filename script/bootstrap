@@ -5,7 +5,7 @@ function main {
   source "$shome/script/profile"
 
   case "${DISTRIB_ID}" in
-    Linux)
+    Alpine)
       ${NOSUDO} sudo apk add openssh
       ;;
     *)
